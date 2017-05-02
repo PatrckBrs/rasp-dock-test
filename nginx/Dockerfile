@@ -15,4 +15,4 @@ USER www-data
 
 EXPOSE 80 443
 
-CMD ["/bin/nginx" , "&&" , "tail -f /var/log/nginx/*.log"]
+CMD ["nginx", "-g", "daemon off;", "&&", "tail -f /var/log/nginx/*.log"]
